@@ -1,35 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sandwich Bear</title>
-  <link href="libs/daisyui@5.css" rel="stylesheet" type="text/css" />
-  <script src="libs/tailwindcss@4.js"></script>
-  <style>
-    @media (prefers-color-scheme: dark) {
-
-      html,
-      body {
-        background-color: #0b0b0c;
-      }
-
-      #iframe-container {
-        background-color: #0b0b0c;
-      }
-
-      #iframe-container .resizable-iframe {
-        border-color: #3f3f46 !important;
-        color-scheme: dark;
-      }
-    }
-  </style>
+  <link rel="icon" href="../icons/icon-128x128.png">
+  <script src="./libs/tailwindcss@4.js"></script>
+  <script type="module" src="./split.js"></script>
 </head>
 
-<body class="m-0 p-0 h-full w-full overflow-hidden">
-  <div id="iframe-container" class="flex h-screen w-screen"></div>
-  <script type="module" src="split/entry.js"></script>
+<body class="bg-gray-100 dark:bg-gray-900 w-screen h-screen flex flex-col items-center justify-center">
+  <div class="text-2xl font-bold">🐻‍❄️🥪 Sandwich Bear</div>
 </body>
 
 </html>

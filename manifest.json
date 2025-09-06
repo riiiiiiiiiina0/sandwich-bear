@@ -14,38 +14,12 @@
   },
   "permissions": [
     "tabs",
-    "declarativeNetRequest"
-  ],
-  "host_permissions": [
-    "<all_urls>"
+    "tabGroups",
+    "system.display",
+    "storage"
   ],
   "background": {
     "type": "module",
     "service_worker": "src/background.js"
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "src/content/title-probe.js",
-        "src/content/frame-connector.js"
-      ],
-      "run_at": "document_start",
-      "all_frames": true,
-      "match_about_blank": true
-    },
-    {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "src/content/anchor.js"
-      ],
-      "run_at": "document_idle",
-      "all_frames": true,
-      "match_about_blank": true
-    }
-  ]
+  }
 }
